@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【緊急公開】頂上決戦ベスト4完全的中攻略｜ロードオブマスターズ必勝法</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'メイリオ', Meiryo, sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+      overflow-x: hidden;
+      padding-bottom: 70px;
+    }
+
+    /* ===== 上部バナー ===== */
+    .top-banner {
+      background: linear-gradient(90deg, #ff0000, #ff6600, #ff0000);
+      background-size: 200% 100%;
+      animation: slideBg 2s linear infinite;
+      text-align: center;
+      padding: 12px;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    @keyframes slideBg { 0%{background-position:0%} 100%{background-position:200%} }
+
+    /* ===== ヒーロー ===== */
+    .hero {
+      background: radial-gradient(ellipse at center, #1a0033 0%, #000 70%);
+      text-align: center;
+      padding: 40px 20px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='1' fill='%23ff00ff' opacity='0.3'/%3E%3C/svg%3E");
+    }
+    .hero-badge {
+      display: inline-block;
+      background: #ff0000;
+      color: #fff;
+      padding: 6px 20px;
+      border-radius: 3px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      animation: pulse 1s infinite;
+    }
+    @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.05)} }
+
+    .hero h1 {
+      font-size: clamp(22px, 5vw, 46px);
+      line-height: 1.45;
+      margin-bottom: 20px;
+      text-shadow: 0 0 30px #ff00ff;
+    }
+    .hero h1 span { color: #ffff00; }
+    .hero h1 em { color: #ff6600; font-style: normal; }
+
+    .hero-sub {
+      font-size: clamp(14px, 2.5vw, 19px);
+      color: #ccc;
+      margin-bottom: 30px;
+      line-height: 1.9;
+    }
+
+    .rule-box {
+      display: inline-block;
+      background: rgba(255,255,0,0.07);
+      border: 2px solid #ffff00;
+      border-radius: 10px;
+      padding: 18px 30px;
+      margin-bottom: 28px;
+      font-size: clamp(13px, 2vw, 16px);
+      color: #ffff00;
+      line-height: 1.9;
+      text-align: left;
+    }
+    .rule-box strong { color: #fff; }
+
+    .countdown-box {
+      display: inline-flex;
+      gap: 10px;
+      background: rgba(255,0,0,0.15);
+      border: 2px solid #ff0000;
+      padding: 15px 25px;
+      border-radius: 8px;
+      margin-bottom: 28px;
+    }
+    .countdown-box .unit { text-align: center; }
+    .countdown-box .num { font-size: 36px; font-weight: bold; color: #ff3333; font-family: monospace; }
+    .countdown-box .lbl { font-size: 11px; color: #aaa; }
+    .sep { font-size: 36px; color: #ff3333; align-self: center; }
+
+    /* ===== セクション共通 ===== */
+    section { padding: 60px 20px; max-width: 900px; margin: 0 auto; }
+
+    .section-title {
+      font-size: clamp(20px, 4vw, 32px);
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 60px; height: 3px;
+      background: linear-gradient(90deg, #ff00ff, #ffff00);
+      margin: 12px auto 0;
+    }
+
+    /* ===== 実績数字 ===== */
+    .stats-bg {
+      background: linear-gradient(135deg, #1a0033, #000033);
+      border-top: 3px solid #ff00ff;
+      border-bottom: 3px solid #ff00ff;
+      padding: 50px 20px;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 30px;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .stat-item .big-num {
+      font-size: clamp(36px, 7vw, 60px);
+      font-weight: bold;
+      color: #ffff00;
+      text-shadow: 0 0 20px #ffff00;
+      font-family: monospace;
+    }
+    .stat-item .unit { color: #ff6600; font-size: 20px; }
+    .stat-item p { color: #aaa; font-size: 13px; margin-top: 6px; }
+
+    /* ===== 煽りテキスト ===== */
+    .appeal-box {
+      background: linear-gradient(135deg, #330000, #1a0000);
+      border: 2px solid #ff3300;
+      border-radius: 10px;
+      padding: 30px;
+      margin: 40px 0;
+      font-size: clamp(14px, 2.5vw, 17px);
+      line-height: 2;
+    }
+    .appeal-box .marker {
+      background: linear-gradient(transparent 50%, #ffff00 50%);
+      background-size: 100% 200%;
+      background-position: 0 85%;
+      color: #111;
+      padding: 0 2px;
+    }
+    .appeal-box .red { color: #ff4444; font-weight: bold; }
+    .appeal-box .big { font-size: 1.25em; font-weight: bold; color: #ffff00; }
+
+    /* ===== 独自指標 ===== */
+    .secret-box {
+      background: #0d0d0d;
+      border: 1px solid #444;
+      border-left: 5px solid #ff00ff;
+      border-radius: 8px;
+      padding: 25px;
+      margin: 20px 0;
+    }
+    .secret-box h3 { color: #ff00ff; margin-bottom: 12px; font-size: 18px; }
+
+    /* ===== トーナメント表 ===== */
+    .bracket-section { background: #060612; padding: 60px 20px; }
+    .bracket-wrap { max-width: 900px; margin: 0 auto; }
+
+    .bracket-grid {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 0;
+      align-items: start;
+      margin-bottom: 30px;
+    }
+    .bracket-half { display: flex; flex-direction: column; gap: 8px; }
+    .bracket-round-label {
+      text-align: center;
+      font-size: 11px;
+      color: #666;
+      margin-bottom: 6px;
+    }
+    .bracket-match {
+      background: #111;
+      border: 1px solid #333;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .bracket-match .m-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      font-size: 13px;
+      border-bottom: 1px solid #222;
+      min-height: 38px;
+    }
+    .bracket-match .m-row:last-child { border-bottom: none; }
+    .m-icon { font-size: 16px; width: 22px; text-align: center; }
+    .m-name { flex: 1; }
+    .m-tag {
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+    .tag-win  { background:#ff0000; color:#fff; }
+    .tag-adv  { background:#ff6600; color:#fff; }
+    .tag-q    { background:#444;    color:#aaa; }
+
+    .bracket-center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 16px;
+      gap: 8px;
+    }
+    .final-arrow { color: #ff00ff; font-size: 22px; }
+
+    .best4-box {
+      background: linear-gradient(135deg, #1a0033, #000033);
+      border: 2px solid #ff00ff;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+    }
+    .best4-box h3 { color: #ff00ff; font-size: 15px; margin-bottom: 14px; }
+    .best4-slot {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 12px;
+      border-radius: 6px;
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+    .slot-revealed { background: rgba(255,0,255,0.1); border: 1px solid #ff00ff44; }
+    .slot-locked   { background: #111; border: 1px solid #333; color: #555; }
+    .slot-icon { font-size: 18px; }
+    .slot-name { flex: 1; text-align: left; }
+    .hit-badge { background: #ffff00; color: #000; font-size: 11px; font-weight: bold; padding: 2px 7px; border-radius: 3px; }
+
+    /* モザイク */
+    .mosaic       { filter: blur(4px) brightness(0.4); user-select: none; pointer-events: none; }
+    .mosaic-light { filter: blur(2px) brightness(0.6); user-select: none; }
+    .lock-overlay { position: relative; }
+    .lock-overlay::after {
+      content: '🔒 会員限定';
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: #888;
+      background: rgba(0,0,0,0.75);
+      border-radius: 6px;
+    }
+
+    /* ===== 証言 ===== */
+    .testimonials { background: #0a0a1a; padding: 60px 20px; }
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .testimonial-card {
+      background: #111122;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 25px;
+      transition: transform .2s;
+    }
+    .testimonial-card:hover { transform: translateY(-3px); }
+    .avatar {
+      width: 52px; height: 52px;
+      background: linear-gradient(135deg, #ff00ff, #ff6600);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+    .t-name  { font-weight: bold; margin-bottom: 3px; }
+    .t-meta  { color: #888; font-size: 12px; margin-bottom: 10px; }
+    .t-score { font-size: 20px; font-weight: bold; color: #ffff00; margin-bottom: 8px; }
+    .stars   { color: #ff9900; margin-bottom: 8px; font-size: 14px; }
+    .t-text  { color: #bbb; font-size: 13px; line-height: 1.75; }
+
+    /* ===== 価格 ===== */
+    .price-section { background: linear-gradient(135deg, #1a0033, #33001a); padding: 60px 20px; text-align: center; }
+    .price-box {
+      background: #0d0d0d;
+      border: 3px solid #ff00ff;
+      border-radius: 15px;
+      padding: 40px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 0 60px rgba(255,0,255,.3);
+    }
+    .price-before { text-decoration: line-through; color: #666; font-size: 22px; margin-bottom: 4px; }
+    .price-now    { font-size: clamp(36px, 8vw, 68px); font-weight: bold; color: #ffff00; text-shadow: 0 0 20px #ffff00; }
+    .price-unit   { font-size: 18px; color: #aaa; margin-bottom: 18px; }
+    .price-note   { color: #ff9900; font-size: 13px; margin-bottom: 28px; line-height: 1.8; }
+
+    .cta-button {
+      display: inline-block;
+      background: linear-gradient(135deg, #ff0000, #ff6600);
+      color: #fff;
+      font-size: clamp(18px, 3.5vw, 26px);
+      font-weight: bold;
+      padding: 18px 46px;
+      border-radius: 50px;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      animation: ctaPulse 1.5s ease-in-out infinite;
+      box-shadow: 0 10px 40px rgba(255,0,0,.5);
+      letter-spacing: 1px;
+    }
+    @keyframes ctaPulse {
+      0%,100%{ transform:scale(1);    box-shadow:0 10px 40px rgba(255,0,0,.5); }
+      50%    { transform:scale(1.04); box-shadow:0 15px 60px rgba(255,0,0,.8); }
+    }
+
+    .guarantee-box {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      background: rgba(0,255,100,.08);
+      border: 1px solid #00ff66;
+      border-radius: 8px;
+      padding: 15px 20px;
+      margin: 25px 0;
+      text-align: left;
+    }
+    .guarantee-box .g-icon { font-size: 34px; }
+    .guarantee-box p { font-size: 13px; color: #aaa; line-height: 1.7; }
+    .guarantee-box strong { color: #00ff66; }
+
+    /* ===== FAQ ===== */
+    .faq-item { background: #111; border: 1px solid #333; border-radius: 8px; padding: 20px; margin-bottom: 14px; }
+    .faq-q { color: #ff9900; font-weight: bold; margin-bottom: 9px; }
+    .faq-a { color: #bbb; line-height: 1.75; font-size: 14px; }
+
+    /* ===== フッター ===== */
+    .disclaimer {
+      background: #050505;
+      border-top: 1px solid #222;
+      padding: 28px 20px;
+      text-align: center;
+      font-size: 11px;
+      color: #555;
+      line-height: 1.9;
+    }
+
+    /* ===== 固定CTA ===== */
+    .fixed-cta {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: linear-gradient(135deg, #ff0000, #cc0000);
+      text-align: center;
+      padding: 13px;
+      z-index: 9999;
+      box-shadow: 0 -5px 20px rgba(255,0,0,.5);
+      display: flex; align-items: center; justify-content: center; gap: 14px;
+    }
+    .fixed-cta span { font-size: 13px; font-weight: bold; }
+    .fixed-cta a {
+      background: #ffff00;
+      color: #000;
+      padding: 9px 24px;
+      border-radius: 25px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    /* ===== ユーティリティ ===== */
+    .text-center { text-align: center; }
+    .yellow { color: #ffff00; }
+    .divider { border: none; border-top: 1px dashed #333; margin: 40px 0; }
+    .small-note { font-size: 12px; color: #666; text-align: center; margin-top: 10px; }
+    .hype-text {
+      font-size: clamp(15px, 2.8vw, 22px);
+      font-weight: bold;
+      color: #ff6600;
+      text-align: center;
+      line-height: 1.9;
+      margin: 30px 0;
+    }
+    .blink { animation: blink .8s step-end infinite; }
+    @keyframes blink { 50%{ opacity:0; } }
+
+    .parody-note {
+      background: #111;
+      border: 1px solid #ff00ff44;
+      border-radius: 6px;
+      padding: 9px 15px;
+      font-size: 11px;
+      color: #777;
+      text-align: center;
+      margin-bottom: 22px;
+      position: relative; z-index: 1;
+    }
+
+    /* ===== モバイル対応 ===== */
+    @media (max-width: 600px) {
+
+      /* セクション余白縮小 */
+      section { padding: 36px 16px; }
+
+      /* ルールボックス */
+      .rule-box {
+        display: block;
+        padding: 16px 18px;
+        text-align: left;
+      }
+
+      /* カウントダウン */
+      .countdown-box { padding: 12px 16px; gap: 6px; }
+      .countdown-box .num { font-size: 28px; }
+      .sep { font-size: 28px; }
+
+      /* 実績グリッド：2×2に */
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+      .stat-item .big-num { font-size: clamp(28px, 10vw, 46px); }
+
+      /* 独自指標 */
+      .secret-box { padding: 18px 16px; }
+      .secret-box h3 { font-size: 15px; }
+
+      /* トーナメント表：縦積みに */
+      .bracket-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .bracket-center {
+        flex-direction: row;
+        justify-content: center;
+        padding: 0;
+      }
+      .bracket-center .final-arrow { display: none; }
+      .best4-box { width: 100%; }
+
+      /* ビフォーアフター：縦積み */
+      section > div[style*="grid-template-columns:1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+      }
+
+      /* 証言カード */
+      .testimonial-grid { grid-template-columns: 1fr; }
+
+      /* 価格ボックス */
+      .price-box { padding: 24px 16px; }
+      .cta-button {
+        display: block;
+        width: 100%;
+        padding: 16px 20px;
+        font-size: 18px;
+        text-align: center;
+        box-sizing: border-box;
+      }
+      .guarantee-box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      /* 固定CTA */
+      .fixed-cta { gap: 8px; padding: 10px 12px; flex-wrap: wrap; justify-content: center; }
+      .fixed-cta span { font-size: 12px; }
+      .fixed-cta a { padding: 8px 18px; font-size: 13px; }
+
+      /* FAQ */
+      .faq-item { padding: 16px; }
+
+      /* シークレットプラン */
+      #secret-plan > div { padding: 20px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- 上部バナー -->
+<div class="top-banner">
+  ⚠️ 残り<span id="slots" class="blink">3</span>名様限定公開中！本日23:59で締め切り！⚠️
+</div>
+
+<!-- ヒーロー -->
+<div class="hero">
+  <div class="parody-note">※これはパロディ・風刺サイトです。架空の情報提供サービスを模した創作コンテンツです。</div>
+
+  <div class="hero-badge">🔥 期間限定無料公開中</div>
+
+  <h1>
+    なぜあなたは<br>
+    <em>頂上決戦ベスト4投票</em>で<br>
+    <span>毎回1〜2ヒットしか当たらない</span>のか？
+  </h1>
+
+  <p class="hero-sub">
+    元LINEモンスターファーム廃人プレイヤーが語る<br>
+    <strong style="color:#ffff00">「絶対に表には出せない」16強トーナメント分析法</strong><br>
+    を今だけ特別公開します
+  </p>
+
+  <div class="rule-box">
+    🏆 <strong>頂上決戦とは？</strong><br>
+    全モンスターから勝ち抜いた<strong>16体</strong>によるトーナメント<br>
+    ユーザーは<strong>ベスト4に残ると思う4体</strong>に事前投票<br>
+    最高報酬は<strong>4体すべて的中（4ヒット）</strong>
+  </div>
+
+  <div class="countdown-box">
+    <div class="unit"><div class="num" id="h">02</div><div class="lbl">時間</div></div>
+    <div class="sep">:</div>
+    <div class="unit"><div class="num" id="m">47</div><div class="lbl">分</div></div>
+    <div class="sep">:</div>
+    <div class="unit"><div class="num" id="s">33</div><div class="lbl">秒</div></div>
+  </div>
+
+  <p style="color:#ff9999; font-size:13px;">⚠ 投票締め切りまで残りわずか。今すぐ確認してください</p>
+</div>
+
+<!-- 実績数字 -->
+<div class="stats-bg">
+  <div style="max-width:900px; margin:0 auto;">
+    <h2 class="section-title" style="margin-bottom:36px;">驚愕の実績（自社調べ）</h2>
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="big-num">3.7<span class="unit">hit</span></div>
+        <p>会員様の平均的中ヒット数<br><span style="font-size:11px; color:#666">（全18回・回答者上位集計）</span></p>
+      </div>
+      <div class="stat-item">
+        <div class="big-num">68<span class="unit">%</span></div>
+        <p>4ヒット完全的中達成率<br><span style="font-size:11px; color:#666">（18回中9回達成！）</span></p>
+      </div>
+      <div class="stat-item">
+        <div class="big-num">847<span class="unit">名</span></div>
+        <p>累計会員数</p>
+      </div>
+      <div class="stat-item">
+        <div class="big-num">9<span class="unit">回</span></div>
+        <p>4ヒット完全的中輩出回数<br><span style="font-size:11px; color:#666">（全18回中）</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 本文煽り -->
+<section>
+  <h2 class="section-title">あなたにも覚えがあるはずです</h2>
+
+  <div class="appeal-box">
+    <p>
+      16体のトーナメント……4体を選ぶだけ。<br>
+      確率だけ見れば<span class="red">4/16なんて楽勝でしょ？</span><br>
+      そう思っていたのに、なぜか毎回<span class="red">1ヒットか2ヒット止まり</span>。
+    </p>
+    <br>
+    <p>
+      <span class="marker">「絶対ベスト4でしょ」と思って入れた1体が初戦で敗退。</span><br>
+      逆に「まさかこいつは入らないよな」と外したモンスターが<br>
+      <span class="red">するすると決勝まで勝ち上がっていく</span>あの感覚。
+    </p>
+    <br>
+    <p class="big">
+      それはあなたの読みが甘いのではありません。<br>
+      「見てはいけないデータ」を知らないだけです。
+    </p>
+  </div>
+
+  <div class="hype-text">
+    4ヒットは運ゲーではありません。<br>
+    <span class="yellow">16強の「勝ち上がりパターン」には法則があるのです。</span>
+  </div>
+</section>
+
+<!-- 秘密の情報源 -->
+<section style="padding-top:0;">
+  <h2 class="section-title">私たちが持つ「5つの独自指標」</h2>
+
+  <div class="secret-box">
+    <h3>📊 指標①：組み合わせ有利不利スコア（TB指数）</h3>
+    <p style="color:#ccc; line-height:1.8;">
+      トーナメント表の山（ブラケット）ごとに「対戦相性」を数値化した独自スコア。
+      <span style="color:#ffff00">同じ強さでも山の組み合わせ次第でベスト4通過率が最大3倍変わる</span>ことが
+      全18回分の結果分析で判明。
+    </p>
+  </div>
+
+  <div class="secret-box">
+    <h3>🔥 指標②：プレイヤー熱量指数（PH指数）</h3>
+    <p style="color:#ccc; line-height:1.8;">
+      SNS言及数・スクショ投稿数・攻略掲示板の書き込み頻度を独自クローラーで収集。
+      <span style="color:#ffff00">トーナメント表公開から24時間以内の急騰パターン</span>が
+      ベスト4通過率と高い相関を示すことを確認済み。
+    </p>
+  </div>
+
+  <div class="secret-box">
+    <h3>🎯 指標③：コンテスト履歴補正値（CH補正）</h3>
+    <p style="color:#ccc; line-height:1.8;">
+      過去の頂上決戦における「似たステータス構成のモンスター」の勝ち上がりパターンを分析。
+      <span style="color:#ffff00">「前回初戦敗退モンスターの翌コンテスト勝率」</span>など
+      見落とされがちなリバウンド傾向を定量化。
+    </p>
+  </div>
+
+  <div class="secret-box">
+    <h3>💎 指標④：レアリティ×時期補正（RD指数）</h3>
+    <p style="color:#ccc; line-height:1.8;">
+      モンスターのレアリティ・実装時期・イベント連動の有無による補正。
+      <span style="color:#ffff00">特定フラグが重なるとベスト4通過率が+19%上振れ</span>する
+      傾向を独自データベースで管理。
+    </p>
+  </div>
+
+  <div class="secret-box">
+    <h3>🌙 指標⑤：番狂わせ検知フラグ（UK検知）</h3>
+    <p style="color:#ccc; line-height:1.8;">
+      下馬評が低いモンスターが上位に食い込む「番狂わせ」パターンを事前検知するシグナル。
+      <span style="color:#ffff00">これを見逃すと4ヒットは永遠に達成できません。</span>
+      見落としている人が会員登録前の9割以上というデータあり。
+    </p>
+  </div>
+</section>
+
+<!-- トーナメント表 -->
+<div class="bracket-section">
+  <div class="bracket-wrap">
+    <h2 class="section-title">【先行公開】今回の頂上決戦 予想</h2>
+    <p style="text-align:center; color:#aaa; margin-bottom:25px; font-size:14px;">
+      ※会員様のみ全情報開示。下記は一部のみ無料公開
+    </p>
+
+    <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-bottom:22px; font-size:12px;">
+      <span style="background:#ff000033; border:1px solid #ff0000; padding:4px 12px; border-radius:4px;">◎ 無料公開（種のみ）</span>
+      <span style="background:#33333399; border:1px solid #555; padding:4px 12px; border-radius:4px;">🔒 会員限定（名前・オーラ・詳細）</span>
+    </div>
+
+    <div class="bracket-grid">
+      <!-- 左山 -->
+      <div class="bracket-half">
+        <div class="bracket-round-label">【Aブロック】準々決勝</div>
+        <div class="bracket-match">
+          <div class="m-row">
+            <span class="m-icon">🐉</span>
+            <span class="m-name">〇〇種 <span class="mosaic-light">・〇オーラ「████████」</span></span>
+            <span class="m-tag tag-win">◎通過予想</span>
+          </div>
+          <div class="m-row lock-overlay">
+            <span class="m-icon mosaic">🦎</span>
+            <span class="m-name mosaic">〇〇種・〇オーラ「████」</span>
+            <span class="m-tag tag-q mosaic">△</span>
+          </div>
+        </div>
+        <div class="bracket-match">
+          <div class="m-row">
+            <span class="m-icon">🦁</span>
+            <span class="m-name">〇〇種 <span class="mosaic-light">・〇オーラ「████████」</span></span>
+            <span class="m-tag tag-adv">○通過有力</span>
+          </div>
+          <div class="m-row lock-overlay">
+            <span class="m-icon mosaic">🐺</span>
+            <span class="m-name mosaic">〇〇種・〇オーラ「████」</span>
+            <span class="m-tag tag-q mosaic">△</span>
+          </div>
+        </div>
+        <div class="bracket-round-label" style="margin-top:8px;">準決勝（Aブロック）</div>
+        <div class="bracket-match">
+          <div class="m-row">
+            <span class="m-icon">🐉</span>
+            <span class="m-name">〇〇種 <span class="mosaic-light">詳細は会員限定</span></span>
+            <span class="m-tag tag-win">◎ベスト4予想</span>
+          </div>
+          <div class="m-row">
+            <span class="m-icon">🦁</span>
+            <span class="m-name">〇〇種 <span class="mosaic-light">詳細は会員限定</span></span>
+            <span class="m-tag tag-adv">○ベスト4予想</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 中央 -->
+      <div class="bracket-center">
+        <div class="final-arrow">←</div>
+        <div class="best4-box">
+          <h3>🏆 予想<br>ベスト4</h3>
+          <div class="best4-slot slot-revealed">
+            <span class="slot-icon">🐉</span>
+            <span class="slot-name" style="font-size:13px;">〇〇種<br><span style="font-size:11px; color:#888">（名前・オーラは会員限定）</span></span>
+            <span class="hit-badge">◎</span>
+          </div>
+          <div class="best4-slot slot-revealed">
+            <span class="slot-icon">🦁</span>
+            <span class="slot-name" style="font-size:13px;">〇〇種<br><span style="font-size:11px; color:#888">（名前・オーラは会員限定）</span></span>
+            <span class="hit-badge">○</span>
+          </div>
+          <div class="best4-slot slot-locked">
+            <span class="slot-icon">🔒</span>
+            <span class="slot-name" style="font-size:13px;">〇〇種・全情報<br>会員限定</span>
+          </div>
+          <div class="best4-slot slot-locked">
+            <span class="slot-icon">🔒</span>
+            <span class="slot-name" style="font-size:13px;">〇〇種・全情報<br>会員限定</span>
+          </div>
+        </div>
+        <div class="final-arrow">→</div>
+      </div>
+
+      <!-- 右山：全部ロック -->
+      <div class="bracket-half">
+        <div class="bracket-round-label">【Bブロック】準々決勝</div>
+        <div class="bracket-match">
+          <div class="m-row lock-overlay">
+            <span class="m-icon mosaic">🔥</span>
+            <span class="m-name mosaic">〇〇種・〇オーラ「████████」</span>
+            <span class="m-tag mosaic tag-adv">○</span>
+          </div>
+          <div class="m-row lock-overlay">
+            <span class="m-icon mosaic">❄️</span>
+            <span class="m-name mosaic">〇〇種・〇オーラ「████」</span>
+            <span class="m-tag mosaic tag-q">△</span>
+          </div>
+        </div>
+        <div class="bracket-match">
+          <div class="m-row lock-overlay">
+            <span class="m-icon mosaic">⚡</span>
+            <span class="m-name mosaic">〇〇種・〇オーラ「████████」</span>
+            <span class="m-tag mosaic tag-win">◎</span>
+          </div>
+          <div class="m-row lock-overlay">
+            <span class="m-icon mosaic">🌊</span>
+            <span class="m-name mosaic">〇〇種・〇オーラ「████」</span>
+            <span class="m-tag mosaic tag-q">△</span>
+          </div>
+        </div>
+        <div class="bracket-round-label" style="margin-top:8px;">準決勝（Bブロック）</div>
+        <div class="bracket-match">
+          <div class="m-row lock-overlay">
+            <span class="m-icon mosaic">🔥</span>
+            <span class="m-name mosaic">〇〇種・全情報</span>
+            <span class="m-tag mosaic tag-win">◎</span>
+          </div>
+          <div class="m-row lock-overlay">
+            <span class="m-icon mosaic">⚡</span>
+            <span class="m-name mosaic">〇〇種・全情報</span>
+            <span class="m-tag mosaic tag-adv">○</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="small-note">
+      ※無料公開はAブロック2体の「種」のみ。名前・オーラ・Bブロック全情報・番狂わせフラグは有料プランで開示<br>
+      ※予想はあくまで弊社独自分析です。当然ながらハズれることもあります（←一応書いておく）
+    </p>
+  </div>
+</div>
+
+<!-- 証言 -->
+<div class="testimonials">
+  <div style="max-width:900px; margin:0 auto;">
+    <h2 class="section-title">会員様の声（一部抜粋）</h2>
+
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="avatar">🧑</div>
+        <div class="t-name">ゴーレム育成歴7年・Kさん（42歳）</div>
+        <div class="t-meta">東北地方在住・会社員</div>
+        <div class="stars">★★★★★</div>
+        <div class="t-score">登録後6回平均 3.2ヒット！</div>
+        <div class="t-text">
+          登録前は平均1〜2ヒットだったのが、6回参加して3ヒット以上を4回達成。
+          第16回・第18回では4ヒット完全的中も出せました。
+          「番狂わせフラグ」で穴モンスターを拾えたのが大きかったです。
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="avatar">👩</div>
+        <div class="t-name">フェニックス推し・Mさん（28歳）</div>
+        <div class="t-meta">関西地方在住・主婦</div>
+        <div class="stars">★★★★★</div>
+        <div class="t-score">第15回・第17回で4ヒット達成！</div>
+        <div class="t-text">
+          「どうせ1〜2ヒットでしょ」と諦めていたのが嘘のよう。
+          山の組み合わせ分析で推しを「外す判断」ができるようになったのが一番の収穫です。
+          推しが負けても「想定内」と言えるようになりました（涙）。
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="avatar">🧓</div>
+        <div class="t-name">初代からのファン・Tさん（55歳）</div>
+        <div class="t-meta">関東地方在住・自営業</div>
+        <div class="stars">★★★★★</div>
+        <div class="t-score">18回全参加・平均2.9ヒット</div>
+        <div class="t-text">
+          全18回皆勤で参加してきましたが、登録前の平均は1.6ヒット。
+          登録後10回の平均は2.9ヒットまで上がりました。
+          4ヒットは第11回の1回だけですが、3ヒット以上の安定感が全然違います。
+        </div>
+      </div>
+    </div>
+
+    <p class="small-note" style="margin-top:22px;">
+      ※お客様の感想であり、個人の体験です。的中を保証するものではありません。<br>
+      ※「平均ヒット数」は各自の投票4枠中の的中数平均です。全会員平均ではなく回答者抜粋。
+    </p>
+  </div>
+</div>
+
+<!-- ビフォーアフター -->
+<section>
+  <h2 class="section-title">使う前と使った後</h2>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+    <div style="background:#1a0000; border:2px solid #440000; border-radius:10px; padding:25px;">
+      <h3 style="color:#ff4444; margin-bottom:15px;">😫 登録前</h3>
+      <ul style="color:#ccc; line-height:2.3; font-size:14px; padding-left:18px;">
+        <li>平均ヒット数：1〜2ヒット</li>
+        <li>4ヒット達成率：ほぼ0%</li>
+        <li>推し補正で判断が歪む</li>
+        <li>なぜ外れたかわからない</li>
+        <li>山の有利不利を考えていない</li>
+        <li>番狂わせを毎回食らう</li>
+      </ul>
+    </div>
+    <div style="background:#001a00; border:2px solid #004400; border-radius:10px; padding:25px;">
+      <h3 style="color:#00ff66; margin-bottom:15px;">😄 登録後</h3>
+      <ul style="color:#ccc; line-height:2.3; font-size:14px; padding-left:18px;">
+        <li>平均ヒット数：3.5〜4ヒット</li>
+        <li>4ヒット達成率：急上昇</li>
+        <li>データで冷静に4体を選べる</li>
+        <li>外れ理由が毎回明確</li>
+        <li>山の組み合わせ有利を活用</li>
+        <li>番狂わせを事前に把握</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 価格 -->
+<div class="price-section">
+  <div style="max-width:900px; margin:0 auto;">
+    <h2 class="section-title">特別価格でのご案内</h2>
+
+    <div style="font-size:11px; color:#888; text-align:center; margin-bottom:8px; letter-spacing:2px;">— スタンダードプラン —</div>
+    <div class="price-box">
+      <p style="color:#aaa; margin-bottom:8px;">通常価格</p>
+      <div class="price-before">¥19,800 / 月</div>
+
+      <p style="color:#ff9900; font-size:14px; margin:10px 0;">↓ 今だけ特別割引！</p>
+
+      <div class="price-now">¥4,980</div>
+      <div class="price-unit">/ 月（税込）</div>
+
+      <div style="background:#111; border:1px solid #333; border-radius:8px; padding:14px 20px; margin:16px 0; text-align:left;">
+        <p style="font-size:13px; color:#aaa; margin-bottom:8px;">プラン内容</p>
+        <ul style="color:#ccc; font-size:13px; line-height:2; padding-left:18px;">
+          <li>毎回・全16強ベスト4予想（会員限定全開示）</li>
+          <li>TB指数・PH指数・番狂わせフラグ 全5指標レポート</li>
+          <li>トーナメント表 山別有利不利解説</li>
+          <li>投票締め切り前の最終調整情報</li>
+        </ul>
+      </div>
+
+      <div class="price-note">
+        ⏰ この価格は本日限り！明日から通常価格に戻ります<br>
+        <span style="color:#666; font-size:11px;">※毎月「本日限り」です</span>
+      </div>
+
+      <div class="guarantee-box">
+        <div class="g-icon">🛡️</div>
+        <p>
+          <strong>30日間完全返金保証</strong><br>
+          ご満足いただけない場合は全額返金いたします。<br>
+          <span style="color:#555; font-size:11px;">※「的中しなかった」は返金理由に該当しません（条件多数）</span>
+        </p>
+      </div>
+
+      <a href="#" class="cta-button" onclick="alert('これはパロディサイトです。実際のサービスは存在しません！'); return false;">
+        今すぐ無料登録する →
+      </a>
+
+      <p style="color:#666; font-size:12px; margin-top:14px;">
+        ※クレジットカード不要・LINEアカウントで即登録（架空）
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section>
+  <h2 class="section-title">よくある質問</h2>
+
+  <div class="faq-item">
+    <div class="faq-q">Q. そもそも16体から4体を選ぶだけなら自分でもできませんか？</div>
+    <div class="faq-a">
+      A. 確率だけ見れば4/16で楽勝に思えますよね。でも「全員が欲しいモンスターを選ぶ」という
+      心理バイアスと「トーナメント表の山による有利不利」を無視すると毎回同じ間違いを繰り返します。
+      そこを体系化したのが弊社サービスです。<span style="color:#ff6600">（←ここが全部です正直）</span>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q. 平均ヒット数3.7は本当ですか？</div>
+    <div class="faq-a">
+      A. 会員様にアンケートを実施し、回答してくださった方のうち上位層の平均値です。
+      全会員の平均ではありません。なお非回答者の結果は集計に含まれておりません。
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q. 推しモンスターを外すのが辛くて入れてしまいます</div>
+    <div class="faq-a">
+      A. これが最大の落とし穴です。弊社サービスでは「推しへの愛」と「的中を狙う投票」を
+      分けて考えるメンタルトレーニングコンテンツも提供しております。
+      <span style="color:#ff6600">推しが負けても泣かないための覚悟も必要です。</span>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q. 解約はできますか？</div>
+    <div class="faq-a">
+      A. 解約は可能です。マイページの「設定」→「その他」→「アカウント」→「詳細設定」
+      →「プラン変更」→「ダウングレード」→「確認」→「最終確認」→
+      「解約理由ヒアリング（必須・10問）」→「引き止めオファー受け取り」→「最最終確認」
+      の順に進んでください。
+    </div>
+  </div>
+</section>
+
+<hr class="divider" style="max-width:900px; margin:0 auto 0;">
+
+<!-- シークレットプラン：右端の目立たない小文字からアクセス -->
+<div style="max-width:900px; margin:0 auto; padding:0 20px 10px;">
+  <p style="text-align:right; font-size:11px; color:#444;">
+    ※その他のプランについては
+    <span id="secret-toggle"
+      style="color:#555; text-decoration:underline; cursor:pointer;"
+      onclick="document.getElementById('secret-plan').style.display = document.getElementById('secret-plan').style.display === 'none' ? 'block' : 'none';"
+    >こちら</span>
+  </p>
+
+  <div id="secret-plan" style="display:none; margin-top:20px;">
+    <div style="
+      background: linear-gradient(135deg, #0d0d00, #1a1500);
+      border: 1px solid #554400;
+      border-radius: 12px;
+      padding: 30px;
+      position: relative;
+      overflow: hidden;
+    ">
+      <div style="position:absolute; inset:0; background:radial-gradient(ellipse at 50% 0%, rgba(255,200,0,0.07) 0%, transparent 70%); pointer-events:none;"></div>
+
+      <div style="text-align:center; margin-bottom:20px;">
+        <span style="
+          display:inline-block;
+          background: linear-gradient(135deg, #aa7700, #ffcc00, #aa7700);
+          color: #000;
+          font-size: 11px;
+          font-weight: bold;
+          padding: 4px 14px;
+          border-radius: 3px;
+          letter-spacing: 2px;
+          margin-bottom: 14px;
+        ">S E C R E T</span>
+        <h3 style="font-size:22px; color:#ffcc00; text-shadow:0 0 15px #ffaa00; margin-bottom:6px;">極意プラン</h3>
+        <p style="font-size:12px; color:#887700;">このプランは公開しておりません。お気づきの方のみご案内しております。</p>
+      </div>
+
+      <div style="background:rgba(0,0,0,0.4); border:1px solid #443300; border-radius:8px; padding:16px 20px; margin-bottom:20px;">
+        <p style="font-size:13px; color:#998800; margin-bottom:10px;">プラン内容（スタンダード全内容 ＋）</p>
+        <ul style="color:#ccc; font-size:13px; line-height:2.2; padding-left:18px;">
+          <li>スタンダードプラン全内容</li>
+          <li style="color:#ffcc00; font-weight:bold;">
+            レア報酬「<span style="text-shadow:0 0 8px #ffaa00;">極意の書・真</span>」抽選率 <span style="font-size:18px; color:#ffff00;">×10倍</span>
+            <span style="font-size:11px; color:#666; font-weight:normal;">（弊社独自ルートによる特別付与・詳細は入会後説明）</span>
+          </li>
+          <li>会員専用クローズドチャットへの招待</li>
+          <li>過去18回全結果レポート（PDF・非公開版）</li>
+        </ul>
+      </div>
+
+      <div style="text-align:center;">
+        <p style="color:#665500; font-size:13px; margin-bottom:6px;">通常価格</p>
+        <div style="text-decoration:line-through; color:#554400; font-size:20px; margin-bottom:4px;">¥49,800 / 月</div>
+        <p style="color:#ff9900; font-size:13px; margin-bottom:4px;">↓ 気づいた方だけの特別価格</p>
+        <div style="font-size:52px; font-weight:bold; color:#ffcc00; text-shadow:0 0 20px #ffaa00; font-family:monospace; line-height:1.1;">¥19,800</div>
+        <div style="font-size:15px; color:#887700; margin-bottom:20px;">/ 月（税込）</div>
+
+        <a href="#" style="
+          display:inline-block;
+          background: linear-gradient(135deg, #aa7700, #ffcc00, #aa7700);
+          color: #000;
+          font-size:16px;
+          font-weight:bold;
+          padding:15px 40px;
+          border-radius:50px;
+          text-decoration:none;
+          letter-spacing:1px;
+          box-shadow: 0 6px 25px rgba(255,180,0,0.4);
+        " onclick="alert('これはパロディサイトです。実際のサービスは存在しません！'); return false;">
+          極意プランに申し込む →
+        </a>
+
+        <p style="color:#443300; font-size:11px; margin-top:14px;">
+          ※本プランは検索・SNS等での告知は一切行っておりません<br>
+          ※「極意の書・真」抽選率向上の仕組みについては入会後の説明会にてご案内します<br>
+          ※定員5名・空き次第終了
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- パロディ注記（大きめ） -->
+<div style="max-width:900px; margin:0 auto; padding:40px 20px;">
+  <div style="background:#1a1a00; border:2px solid #888800; border-radius:12px; padding:30px; text-align:center;">
+    <p style="font-size:18px; color:#ffff00; font-weight:bold; margin-bottom:14px;">🎭 このサイトはパロディ・風刺コンテンツです</p>
+    <p style="color:#aaa; font-size:13px; line-height:1.9;">
+      本サイトは「競馬予想攻略詐欺サイト」のデザインパターンをモデルにした<strong style="color:#fff">フィクションのパロディ作品</strong>です。<br>
+      「LINEモンスターファーム」「ロードオブマスターズ」関連の実際のサービスや情報提供とは<strong style="color:#fff">一切関係ありません</strong>。<br>
+      掲載されているデータ・実績・会員の声・指標名等はすべて架空のものです。<br>
+      実際にこの種のサービスへの課金・登録は絶対に行わないようご注意ください。
+    </p>
+  </div>
+</div>
+
+<!-- フッター -->
+<div class="disclaimer">
+  <p>© 2026 頂上決戦ベスト4研究会（架空）｜このサービスは存在しません</p>
+  <p style="margin-top:8px;">
+    本サービス（架空）はLINE株式会社・KOEI TECMO GAMES Co., Ltd.とは無関係です。<br>
+    「LINE:モンスターファーム」「ロードオブマスターズ」は各社の商標です。<br>
+    本コンテンツはパロディ・風刺目的の創作物であり、実際の投票行動・課金を推奨するものではありません。
+  </p>
+</div>
+
+<!-- 固定CTA -->
+<div class="fixed-cta">
+  <span>🔥 残り<span class="blink">3</span>名！本日23:59まで！</span>
+  <a href="#" onclick="alert('これはパロディサイトです！'); return false;">今すぐ登録（架空）</a>
+</div>
+
+<script>
+  // カウントダウン（永遠にリセットされる詐欺サイト仕様）
+  let total = 2 * 3600 + 47 * 60 + 33;
+  function tick() {
+    total--;
+    if (total < 0) total = 2 * 3600 + 47 * 60 + 33;
+    document.getElementById('h').textContent = String(Math.floor(total / 3600)).padStart(2, '0');
+    document.getElementById('m').textContent = String(Math.floor((total % 3600) / 60)).padStart(2, '0');
+    document.getElementById('s').textContent = String(total % 60).padStart(2, '0');
+  }
+  setInterval(tick, 1000);
+
+  // 残り枠数のランダム変動演出
+  setInterval(() => {
+    const n = Math.floor(Math.random() * 3) + 2;
+    document.querySelectorAll('#slots').forEach(el => el.textContent = n);
+  }, 8000);
+</script>
+</body>
+</html>
